@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+  {% include head.html %}
+
+    <body>
+        {% include musicPanle.html %}
+      <div id="content-div">
+          <div class="rotLeft rotTop pageBack"></div>
+          <div class="rotRight rotTop pageBack"></div>
+
+          <div class="container page">
+
+            {% include header.html %}
+
+            {{ content }}
+
+            {% include footer.html %}
+
+
+          </div>
+          <div class="rotLeft rotBottom pageBack"></div>
+          <div class="rotRight rotBottom pageBack"></div>
+    </div>
+    </body>
+
+</html>

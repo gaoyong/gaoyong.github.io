@@ -1,23 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>灰袍在github</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
-</head>
-<body>
-<h1>灰袍在github战斗</h1>
-<p>达拉然的灰袍法师</p>
+---
+layout: default
+title: Home
+---
 
-<p>艾泽拉斯的守护者</p>
+<div class="home">
 
-<p>萨格拉斯的仇敌</p>
+  <ul class="posts">
+    {% for post in paginator.posts %}
+    <li>
+      <h1 >{{ post.title }}</h1>
+      <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+      <p>{{ post.excerpt }}</p>
+      <div class="continue">
+        <a href="{{ post.url | prepend: site.baseurl }}">&bull;&bull;&bull;</a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
 
-<p><em>人类世界最强大的法师.</em></p>
-</body>
-</html>
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      {% if page == 2 %}
+        <a class="page-link" href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">prv</a>
+      {% else %}
+        <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">prv</a>
+      {% endif %}
+    {% else %}
+      <span class="page-link">prv</span>
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">nxt</a>
+    {% else %}
+      <span class="page-link">nxt</span>
+    {% endif %}
+  </div>
+
+</div>

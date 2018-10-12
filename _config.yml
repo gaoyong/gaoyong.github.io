@@ -1,0 +1,28 @@
+# Site settings
+title: "艾泽拉斯的灰袍法师"
+description: "遁入黑暗吧，虫子"
+baseurl: ""
+url: "http://gaoyong.github.io"
+assetUrl: "https://raw.githubusercontent.com/gaoyong/gaoyong.github.io/master/images/post/"
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+    extensions: [ "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
+
+permalink: pretty
+highlighter: pygments
+paginate: 3
+
+# Links
+links:
+  - title: "主页"
+    url: /
+  - title: "关于"
+    url: /about
+  - title: "网站"
+    url: https://grayrobe.club
+  - title: "源码"
+    url: http://github.com/gaoyong
+  - title: "订阅"
+    url: /feed.xml

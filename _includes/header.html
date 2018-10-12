@@ -1,0 +1,19 @@
+<div class="header">
+    <div class="pageTitle center">
+        <a style="color: #000;" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    </div>
+    <p class="sub-title">
+        {{ site.description }}
+    </p>
+
+    <div class="menu">
+        <ul class="navlist">
+            {% for link in site.links %}
+            <li>
+                <a class="page-link" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <p >艾泽拉斯大陆已经深陷黑暗，虚空世界的恶魔们已然入侵，洛丹伦的火焰还能燃烧多久?</p>
+</div>
